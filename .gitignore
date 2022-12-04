@@ -1,0 +1,9 @@
+node_modules
+.idea/
+package-lock.json
+setting.db
+/logs
+/setting.db
+/state.db
+/admin.html
+/index.html

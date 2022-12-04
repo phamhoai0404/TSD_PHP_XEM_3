@@ -1,0 +1,31 @@
+{
+  "appenders": {
+    "out": { "type": "stdout" },
+    "app": {
+      "type": "file",
+      "filename": "logs/app.log",
+      "maxLogSize": 10485760,
+      "backups": 24
+    },
+    "errorFile":{
+      "type": "file",
+      "filename": "logs/errors.log",
+      "maxLogSize": 10485760,
+      "backups": 24
+    },
+    "errors": {
+      "type": "logLevelFilter",
+      "level": "error",
+      "appender": "errorFile"
+    }
+  },
+
+  "categories": {
+    "default": { "appenders": [ "out", "app", "errors" ], "level": "debug" },
+    "debug": { "appenders": [ "out", "app", "errors" ], "level": "debug" },
+    "info": { "appenders": [ "out", "app", "errors" ], "level": "info" },
+    "warn": { "appenders": [ "out", "app", "errors" ], "level": "warn" },
+    "error": { "appenders": [ "out", "app", "errors" ], "level": "error" },
+    "fatal": { "appenders": [ "out", "app", "errors" ], "level": "fatal" }
+  }
+}
